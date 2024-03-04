@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do Table</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Tasks</h1>
+        <span>Cakis Corporation</span>
+    </header>
+    <main>
+        <div class="title">
+            <h2>Manager</h2>
+            <span>manager tasks</span>
+        </div>
+        <div class="container">
+            <div class="lineInput">
+                <label>task:</label>
+                <input type="text" id="inputTask" placeholder="Enter a new Task">
+            </div>
+            <div class="lineInput">
+                <label for="dateTask">Date</label>
+                <input type="datetime-local" id="dateTask" placeholder="Enter a new Date" onchange="formatDateTime()">
+            </div>
+            <button id="btn1" onclick="taskManage.save()">Save</button>
+            <button onclick="taskManage.cancel()">Cancel</button>
+        </div>
+        <div class="content">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
